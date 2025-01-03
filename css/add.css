@@ -1,0 +1,512 @@
+/* -------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------- TABS --------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------- */
+.add-tabs {
+  display: flex;
+  justify-content: space-between;
+}
+.add-tablink {
+  background-color: #0d1b2a;
+  color: #0d1b2a;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+  transition: all 300ms;
+}
+.add-tablink:hover {
+  background-color: #778da9;
+}
+.create-CV-btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+/* --------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------- CREATE A CV -----------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------- CV Form ------------- */
+.CV-form-container {
+  /* display: flex;
+  justify-content: center; */
+  padding: 0 12rem;
+}
+.CV-form {
+  font-size: 1.8rem;
+  border: 3px solid #0d1b2a;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  padding: 3.2rem;
+  display: grid;
+  column-gap: 4.8rem;
+  row-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  background: radial-gradient(circle, hsla(75, 6%, 87%, 1) 0%, rgba(117, 139, 169, 0.69) 100%);
+}
+
+.CV-form-title {
+  grid-column: 1/-1;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 2rem 0;
+}
+.CV-form label {
+  font-weight: 500;
+  margin-left: 1rem;
+}
+.CV-form ion-icon {
+  transform: translateY(0.3rem);
+}
+
+.CV-form .add-button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.CV-form .add-button {
+  border-radius: 2rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: #415a77;
+  color: #eaeae8;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.CV-form .add-button:hover {
+  background-color: #778da9;
+}
+
+.CV-form input,
+.CV-form select,
+.CV-form textarea {
+  width: 100%;
+  padding: 1.2rem;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  box-shadow: inset 0 0 0 0.15rem #0d1b2a;
+  border: none;
+  background-color: #ffffffbb;
+  border-radius: 1rem;
+  color: #0d1b2a;
+}
+.Objective,
+.Educations,
+.Experiences,
+.Addresses {
+  grid-column: 1/-1;
+}
+
+.with-trashbin {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.with-trashbin > :first-child {
+  flex-grow: 1;
+}
+ion-icon[name="trash"] {
+  color: #e63947ae;
+}
+ion-icon[name="trash"]:hover {
+  color: #e63947;
+  cursor: pointer;
+}
+
+.skill-container,
+.reference-container,
+.address-container,
+.education-container,
+.experience-container {
+  border: 2px solid #415a7793;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+.reference-container {
+  border: none;
+  padding: 0;
+}
+
+.skill-container input[type="text"] {
+  flex-basis: 250%;
+}
+.address-container input[type="text"] {
+  flex-basis: 250%;
+}
+
+.education-container input,
+.experience-container input,
+.education-container textarea,
+.experience-container textarea {
+  margin: 0;
+}
+.education-container input[name="gpa"] {
+  flex-basis: 25%;
+}
+.experience-container .year-container {
+  flex-basis: 60%;
+}
+.education-container .year-container {
+  flex-basis: 40%;
+}
+.experience-container textarea[name="description"] {
+  flex-basis: 150%;
+}
+.experience-container .year-container,
+.education-container .year-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-error-notify {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #f70c28;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.submit-button-wrapper {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+}
+.create-CV-btn,
+.CV-form input[type="submit"] {
+  box-shadow: none;
+  border-radius: 1rem;
+  border: none;
+  padding: 1.2rem;
+  width: 30%;
+  color: #eaeae8;
+  transition: all 300ms;
+}
+.CV-form input[type="submit"]:hover {
+  box-shadow: inset 0 0 0 0.25rem #0d1b2a;
+  color: #0d1b2a;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------- VIEW A CV -----------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------- CV View ------------- */
+.CV-view-container {
+  padding: 6.4rem 30rem;
+}
+.CV-view {
+  /* margin: 6rem 32rem; */
+  display: grid;
+  grid-template-columns: 4.5fr 6fr;
+  column-gap: 2.4rem;
+  background-color: #ffffff;
+  padding: 2.8rem 2.4rem 0 2.4rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 1rem 1.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.CV-view .CV-icon-title ion-icon {
+  transform: translateY(0.6rem);
+}
+
+.CV-avatar {
+  overflow: hidden;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color);
+  position: relative;
+}
+.CV-avatar::before {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+}
+.CV-avatar img {
+  transform: scale(92%);
+  border-radius: 50%;
+  border: 0.5rem solid var(--color);
+  box-shadow: 0 0 0 1.3rem #ffffff;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 78% 50%;
+}
+
+.CV-name-job {
+  color: var(--color);
+  padding-left: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+.CV-name-job .name {
+  font-size: 4.2rem;
+  font-weight: 700;
+}
+.CV-name-job .job {
+  font-size: 1.8rem;
+}
+
+/* ------------- Left half ------------- */
+.CV-personal-information {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem 4rem 2rem;
+  gap: 1.6rem;
+  background-color: var(--color);
+  color: #ffffff;
+}
+.CV-view .contact,
+.CV-view .skills,
+.CV-view .reference {
+  padding: 0 1rem;
+}
+
+.CV-personal-information .objective .details {
+  text-align: justify;
+}
+
+.CV-personal-information .CV-icon-title {
+  margin-bottom: 1.6rem;
+}
+.CV-icon-title .title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 1.5rem;
+}
+.CV-icon-title ion-icon {
+  height: 2.6rem;
+  width: 2.6rem;
+}
+.CV-view .details {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+.CV-personal-information li {
+  margin-left: 2.5rem;
+  padding-left: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.CV-personal-information li:last-child {
+  margin-bottom: 0;
+}
+
+.CV-view .reference .details,
+.CV-view .contact .details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  margin-left: 0.7rem;
+}
+
+/* ------------- Right half ------------- */
+.CV-personal-progress {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2rem 2rem 4rem 2rem;
+  gap: 2rem;
+  color: var(--color);
+  background-color: #fff;
+  font-size: 1.2rem;
+}
+.personal-educations,
+.personal-experiences {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.personal-education,
+.personal-experience {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  line-height: 1.4;
+}
+
+.CV-personal-progress li {
+  margin-left: 2.5rem;
+  padding-left: 0.7rem;
+}
+
+.vertical-line {
+  width: 2.6rem; /* The width of the above icon */
+  grid-row: 1/6;
+  grid-column: 1/2;
+  height: 100%;
+  justify-self: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+/* The two dots */
+.vertical-line::before,
+.vertical-line::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--color);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.vertical-line::before {
+  top: 0;
+}
+.vertical-line::after {
+  bottom: 0;
+}
+/* The black line in the center */
+.line {
+  background-color: var(--color);
+  width: 6%;
+}
+
+.CV-personal-progress .years {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+.CV-personal-progress .university,
+.CV-personal-progress .job {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.CV-personal-progress .company,
+.CV-personal-progress .major {
+  text-transform: uppercase;
+}
+.CV-personal-progress .achievement {
+  font-size: 1.3rem;
+}
+
+/* ----------------------------------------------------------
+------------------------- Slide show ------------------------
+------------------------------------------------------------- */
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.slideshow-container .prev,
+.slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  transform: translateY(-50%);
+  padding: 1.6rem;
+  color: #0d1b2a;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+.slideshow-container .prev {
+  left: 0;
+  transform: translateX(-4.1rem); /* The width of the button */
+  border-radius: 3px 0 0 3px;
+}
+.slideshow-container .next {
+  right: 0;
+  transform: translateX(4.1rem); /* The width of the button */
+  border-radius: 0 3px 3px 0;
+}
+/* On hover, add a black background color with a little bit see-through */
+.slideshow-container .prev:hover,
+.slideshow-container .next:hover {
+  background-color: #415a775e;
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  margin-top: 3rem;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+  background-color: var(--dot-color);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------- UPLOAD CV -----------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------- */
+.CV-upload-form-container {
+  padding: 2rem 12rem;
+}
+.CV-upload-form {
+  padding: 3.2rem;
+  background: linear-gradient(135deg, hsla(75, 6%, 87%, 1) 0%, rgba(117, 139, 169, 0.69) 100%);
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.CV-upload-upload {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: #ffffff;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  grid-column: 1/-1;
+}
+
+.CV-upload-submit-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

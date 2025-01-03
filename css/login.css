@@ -1,0 +1,324 @@
+/*
+---------- COLOR ------------
+Pallete: https://coolors.co/palette/0d1b2a-1b263b-415a77-778da9-eaeae8
+- Primary: #1B263B
+- Tints  : #415A77     #778DA9
+- Shades : #0D1B2A
+- Greys  : #eaeae8
+*/
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #0d1b2a;
+  background-color: #eaeae8;
+  overflow-x: hidden;
+}
+
+footer,
+section {
+  padding: 8.8rem 9.6rem 4.8rem 9.6rem;
+}
+
+.link:link,
+.link:visited {
+  color: #1b263b;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 0.1rem solid currentColor;
+  transition: all 300ms;
+}
+.link:hover,
+.link:active {
+  color: #99e9f2;
+  border-bottom: 0.1rem solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: grid;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.item {
+  font-size: 1.8rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.6rem;
+  letter-spacing: 0.08rem;
+  line-height: 1.3;
+}
+/* ---------------------------------
+--------- Grid / Container ---------
+------------------------------------ */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+:root {
+  --row: 1;
+  --column: 1;
+  --p-top: 0;
+  --p-bottom: 0;
+  --p-left: 0;
+  --p-right: 0;
+  --c-gap: 0;
+  --m-top: 0;
+  --m-bottom: 0;
+}
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-rows: repeat(var(---row), 1fr);
+  grid-template-columns: repeat(var(--column), 1fr);
+  padding-top: var(--p-top);
+  padding-bottom: var(--p-bottom);
+  padding-left: var(--p-left);
+  padding-right: var(--p-right);
+  column-gap: var(--c-gap);
+  row-gap: var(--r-gap);
+  margin-top: var(--m-top);
+  margin-bottom: var(--m-bottom);
+}
+
+/* ---------------------------------
+-------------- HEADER --------------
+------------------------------------ */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eaeae8;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  padding-top: 4.8rem;
+  position: relative;
+}
+.header .logo {
+  height: 8rem;
+  margin-top: 0.4rem;
+}
+
+/* -------------- Navigation -------------- */
+.header-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.header-nav-list a:link,
+.header-nav-list a:visited {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2.2rem;
+  color: #0d1b2a;
+  transition: all 300ms;
+}
+.header-nav-list a:active,
+.header-nav-list a:hover {
+  color: #415a77;
+}
+.header-nav-list a.call-to-action:link,
+.header-nav-list a.call-to-action:visited {
+  background-color: #0d1b2a;
+  color: #eaeae8;
+  padding: 1.2rem 2.4rem;
+  border-radius: 1rem;
+}
+.header-nav-list a.call-to-action:active,
+.header-nav-list a.call-to-action:hover {
+  background-color: #415a77;
+}
+
+/* -------------- Buttons -------------- */
+.btn {
+  font-size: 2rem;
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  border-radius: 1.2rem;
+  transition: all 500ms;
+  cursor: pointer;
+}
+.btn-full,
+.btn-full:link,
+.btn-full:visited {
+  background: linear-gradient(90deg, hsla(211, 53%, 11%, 1) 0%, hsla(212, 29%, 36%, 1) 100%);
+  color: #eaeae8;
+  border: none;
+  font-weight: 600;
+}
+.btn-full:active,
+.btn-full:hover {
+  background-color: transparent;
+  background: none;
+  box-shadow: inset 0 0 0 0.3rem #0d1b2a;
+  color: #0d1b2a;
+}
+.btn-outline,
+.btn-outline:link,
+.btn-outline:visited {
+  border: none;
+  font-family: "Rubik", sans-serif;
+  background-color: #778da9;
+  color: #0d1b2a;
+  font-weight: 500;
+}
+.btn-outline:active,
+.btn-outline:hover {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 0.3rem #778da9;
+}
+
+/* Full-width inputs */
+input[type="text"],
+input[type="password"] {
+  padding: 1rem;
+  margin: 1.5rem 0 3rem 0;
+}
+
+.login-btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+.login-btn.btn {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.below-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login-notify {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #e63946;
+}
+
+/* ---------------------------------------- */
+/* ------------- LOGIN LAYOUT ------------- */
+/* ---------------------------------------- */
+.login-section {
+  max-width: 130rem;
+  display: grid;
+  gap: 6.4rem;
+  grid-template-columns: 1.2fr 1fr;
+  margin: 0 auto;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* ------------- LOGIN IMAGE ------------- */
+.login-img-box {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  background-image: url("../content/img/login-image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.tile {
+  position: relative;
+  background-color: transparent;
+  border: 0.1rem solid #eaeae8;
+}
+.tile:nth-child(13),
+.tile:nth-child(1),
+.tile:nth-child(9),
+.tile:nth-child(19),
+.tile:nth-child(28),
+.tile:nth-child(36) {
+  background-color: #eaeae870;
+}
+.tile:nth-child(2),
+.tile:nth-child(6),
+.tile:nth-child(5),
+.tile:nth-child(30),
+.tile:nth-child(31),
+.tile:nth-child(35) {
+  background-color: #eaeae831;
+}
+.tile:nth-child(3),
+.tile:nth-child(7),
+.tile:nth-child(8),
+.tile:nth-child(12),
+.tile:nth-child(15),
+.tile:nth-child(20),
+.tile:nth-child(22),
+.tile:nth-child(24),
+.tile:nth-child(25),
+.tile:nth-child(32) {
+  background-color: #eaeae816;
+}
+
+.login-img {
+  width: 100%;
+}
+
+/* --------------- LOGIN  FORM ------------------- */
+.search-bar,
+.login input[type="text"],
+.login input[type="password"],
+.cta-form input {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  box-shadow: inset 0 0 0 0.15rem #415a77;
+  border: none;
+  background-color: transparent;
+  border-radius: 1rem;
+  color: #0d1b2a;
+}
+.cta-form input::placeholder {
+  font-family: inherit;
+  color: #868e96;
+}
+.cta-form .buttons {
+  align-self: end;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.cta-form button,
+.login button {
+  align-self: end;
+  justify-self: center;
+  grid-column: 1/-1;
+  padding: 1.2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+label {
+  font-size: 1.8rem;
+  color: #1b263b;
+}

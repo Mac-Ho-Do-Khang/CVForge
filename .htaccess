@@ -1,0 +1,4 @@
+ErrorDocument 404 /index.php?page=error&errMessage=pageNotFound
+
+RewriteEngine On
+RewriteRule ^([0-9])+$ /index.php?page=viewCVs&cvid=$1 [L,R=302]

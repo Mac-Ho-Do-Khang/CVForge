@@ -1,0 +1,90 @@
+/* ------------- Search a CV ------------- */
+.CV-search-container {
+  display: flex;
+  justify-content: center;
+  padding: 4.8rem 0;
+}
+.CV-search {
+  width: 40%;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  padding: 3.2rem;
+  display: grid;
+  column-gap: 4.8rem;
+  row-gap: 2rem;
+  grid-template-columns: 1fr;
+  background: radial-gradient(circle, hsla(75, 6%, 87%, 1) 0%, rgba(117, 139, 169, 0.69) 100%);
+}
+
+.CV-search-title {
+  grid-column: 1/-1;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 2rem 0;
+}
+.CV-search label {
+  font-weight: 500;
+  margin-left: 1rem;
+}
+.CV-search ion-icon {
+  transform: translateY(0.3rem);
+}
+
+.CV-search .add-button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.CV-search .add-button {
+  border-radius: 2rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: #415a77;
+  color: #eaeae8;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.CV-search .add-button:hover {
+  background-color: #778da9;
+}
+
+.CV-search input,
+.CV-search textarea {
+  width: 100%;
+  padding: 1.2rem;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  box-shadow: inset 0 0 0 0.15rem #0d1b2a;
+  border: none;
+  background-color: #ffffffbb;
+  border-radius: 1rem;
+  color: #0d1b2a;
+}
+
+.CV-search input[type="submit"] {
+  box-shadow: none;
+  border-radius: 1rem;
+  border: none;
+  padding: 1.2rem;
+  width: 40%;
+  color: #eaeae8;
+  transition: all 300ms;
+  margin-top: 2rem;
+}
+.CV-search input[type="submit"]:hover {
+  box-shadow: inset 0 0 0 0.25rem #0d1b2a;
+  color: #0d1b2a;
+}
+
+/* ------------- View the CV ------------- */
+.CV-view-search {
+  padding: 2.4rem 39.5rem 9.6rem 39.5rem;
+}
