@@ -69,11 +69,17 @@ The project was developed locally using **XAMPP** and can be deployed online for
 
 ## Screenshots 📸  
 
-**CV Input Form**  
-![CV Input Form](screenshots/cv_form.png)  
+**Home Page**  
+![CV Input Form](screenshots/home.png)  
 
-**Sample CV Display**  
-![Sample CV](screenshots/cv_display.png)  
+**Login Page**  
+![Sample CV](screenshots/login.png)  
+
+**Sign Up Page**  
+![Sample CV](screenshots/signup.png)  
+
+**View Page**  
+![Sample CV](screenshots/view.png)  
 
 ---
 
