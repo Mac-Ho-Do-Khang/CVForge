@@ -65,7 +65,7 @@ _Specification and report of the project are included as PDFs._
 
 ## Deployment 🌐  
 
-The project was developed locally using **XAMPP** and can be deployed online for broader accessibility.  
+The project was developed locally using **XAMPP** and can is deployed online for broader accessibility at [CVForge on InfinityFree](http://cvforge.ct.ws/)  
 
 ## Screenshots 📸  
 
